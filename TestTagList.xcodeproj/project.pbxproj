@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D1866A2424488980009F0825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1866A2324488980009F0825 /* AppDelegate.swift */; };
-		D1866A2624488980009F0825 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1866A2524488980009F0825 /* SceneDelegate.swift */; };
 		D1866A2824488980009F0825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1866A2724488980009F0825 /* ViewController.swift */; };
 		D1866A2B24488980009F0825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1866A2924488980009F0825 /* Main.storyboard */; };
 		D1866A2D24488982009F0825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1866A2C24488982009F0825 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		D1866A2024488980009F0825 /* TestTagList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTagList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1866A2324488980009F0825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1866A2524488980009F0825 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D1866A2724488980009F0825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1866A2A24488980009F0825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1866A2C24488982009F0825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				D1866A2324488980009F0825 /* AppDelegate.swift */,
-				D1866A2524488980009F0825 /* SceneDelegate.swift */,
 				D1866A2724488980009F0825 /* ViewController.swift */,
 				D1866A37244889E3009F0825 /* TagCollectionCell.swift */,
 				D1866A38244889E3009F0825 /* TagCollectionCell.xib */,
@@ -151,7 +148,6 @@
 				D1866A2824488980009F0825 /* ViewController.swift in Sources */,
 				D1866A2424488980009F0825 /* AppDelegate.swift in Sources */,
 				D1866A39244889E3009F0825 /* TagCollectionCell.swift in Sources */,
-				D1866A2624488980009F0825 /* SceneDelegate.swift in Sources */,
 				D1866A3C2448A11C009F0825 /* TagListFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2368GKXZYP;
 				INFOPLIST_FILE = TestTagList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.rikkei.TestTagList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2368GKXZYP;
 				INFOPLIST_FILE = TestTagList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.rikkei.TestTagList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
