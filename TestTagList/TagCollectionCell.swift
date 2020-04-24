@@ -16,6 +16,16 @@ class TagCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //This fix bug ios 12, 12.2 using xib
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+
+        let leftConstraint = contentView.leftAnchor.constraint(equalTo: leftAnchor)
+        let rightConstraint = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+        let topConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
+        let bottomConstraint = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, bottomConstraint])
+
 
         self.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
         self.lbTitle.textColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
