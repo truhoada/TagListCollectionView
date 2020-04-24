@@ -8,9 +8,27 @@
 
 import UIKit
 
+// This work in ios 12 to 12.2
+class BaseTagCollectionView: UICollectionView {
+    private var shouldInvalidateLayout = false
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if shouldInvalidateLayout {
+            collectionViewLayout.invalidateLayout()
+            shouldInvalidateLayout = false
+        }
+    }
+
+    override func reloadData() {
+        shouldInvalidateLayout = true
+        super.reloadData()
+    }
+}
+
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: BaseTagCollectionView!
     @IBOutlet weak var collectionFlowLayout: TagListFlowLayout!
     
     var sizingCell: TagCollectionCell?
@@ -57,7 +75,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         self.configureCell(cell: self.sizingCell, forIndexPath: indexPath)
-        return self.sizingCell?.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize) ?? CGSize.zero
+        let size = self.sizingCell?.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        if let sz = size, sz.width > 0, sz.height > 0 {
+            return sz
+        }
+        return CGSize(width: 100, height: 40)
     }
 }
 
