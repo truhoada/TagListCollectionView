@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     var sizingCell: TagCollectionCell?
 
-    let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
+    let TAGS = ["Tech Tech Tech TechTech TechTechTech Tech Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Tech Tech Tech TechTech TechTechTech Tech Tech", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
